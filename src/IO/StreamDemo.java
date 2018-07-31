@@ -1,5 +1,6 @@
 package IO;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -18,7 +19,7 @@ public class StreamDemo {
         FileInputStream fis = null;
 
         try {
-            fis = new FileInputStream("cache\\Fizzer.txt");
+            fis = new FileInputStream("cache" + File.separator + "Fizzer.txt");
 
             int len = 0;
             byte[] bytes = new byte[1024];
@@ -44,7 +45,7 @@ public class StreamDemo {
     public static void outputStream() {
         FileOutputStream fos = null;
         try {
-            fos = new FileOutputStream("cache\\Fizzer.txt");
+            fos = new FileOutputStream("cache" + File.separator + "Fizzer.txt");
 
             String msg = "这里是Doraemon倩倩的写入文件";
             fos.write(msg.getBytes());

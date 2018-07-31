@@ -55,7 +55,7 @@ public class GetKeyboardInput {
     public static void saveToFile() {
         try {
             BufferedReader bufr = new BufferedReader(new InputStreamReader(System.in));
-            BufferedWriter bufw = new BufferedWriter(new FileWriter("cache\\KeyboardFile.txt"));
+            BufferedWriter bufw = new BufferedWriter(new FileWriter("cache" + File.separator + "KeyboardFile.txt"));
             String line = null;
             while ((line = bufr.readLine()) != null) {
                 bufw.write(line);
@@ -69,15 +69,16 @@ public class GetKeyboardInput {
 
     /**
      * 重新设置键盘的标准输入流，并将读取的文件打印在控制台上
+     *
      * @throws IOException Ex
      */
-    public static void resetIn() throws IOException{
-        System.setIn(new FileInputStream("cache\\KeyboardFile.txt"));
+    public static void resetIn() throws IOException {
+        System.setIn(new FileInputStream("cache" + File.separator + "KeyboardFile.txt"));
 
-        BufferedReader  bufr = new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader bufr = new BufferedReader(new InputStreamReader(System.in));
 
         String line = null;
-        while((line = bufr.readLine()) != null){
+        while ((line = bufr.readLine()) != null) {
             System.out.println(line);
         }
     }

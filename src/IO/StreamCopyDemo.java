@@ -1,5 +1,6 @@
 package IO;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -21,8 +22,8 @@ public class StreamCopyDemo {
         FileInputStream fis = null;
         FileOutputStream fos = null;
         try {
-            fis = new FileInputStream("E:\\CodeCache\\Ariel_Lin_2.jpg");
-            fos = new FileOutputStream("cache\\Ariel_lin.jpg");
+            fis = new FileInputStream("E:" + File.separator + "CodeCache" + File.separator + "Ariel_Lin_2.jpg");
+            fos = new FileOutputStream("cache" + File.separator + "Ariel_lin.jpg");
 
             int len = 0;
             byte[] bytes = new byte[1024];

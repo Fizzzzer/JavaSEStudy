@@ -13,7 +13,7 @@ public class FileWriterDemo {
 
     public static void write() {
         try {
-            FileWriter fw = new FileWriter("cache\\Fizzer_writer.txt");
+            FileWriter fw = new FileWriter("cache" + File.separator + "Fizzer_writer.txt");
             BufferedWriter bufw = new BufferedWriter(fw);
             String msg = "这里是通过字符流写入的数据";
             bufw.write(msg);
@@ -26,9 +26,9 @@ public class FileWriterDemo {
 
     public static void read() {
         try {
-            BufferedReader bufr = new BufferedReader(new FileReader("cache\\Fizzer_writer.txt"));
+            BufferedReader bufr = new BufferedReader(new FileReader("cache" + File.separator + "Fizzer_writer.txt"));
             String line = null;
-            while((line = bufr.readLine()) != null){
+            while ((line = bufr.readLine()) != null) {
                 System.out.println(line);
             }
         } catch (IOException ex) {
