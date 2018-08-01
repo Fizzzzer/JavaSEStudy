@@ -9,6 +9,7 @@ import java.io.*;
 public class FileWriterDemo {
     public static void main(String[] args) {
 
+        read();
     }
 
     public static void write() {
