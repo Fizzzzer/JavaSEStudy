@@ -39,7 +39,7 @@ public class CreateFileGui {
 
         tf = new TextField(20);
 
-        btn = new Button("创建");
+        btn = new Button("Create");
 
         ta = new TextArea(20, 50);
 
