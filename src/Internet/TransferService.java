@@ -26,7 +26,7 @@ public class TransferService {
          * 2：获取数据进行转换，写入服务端的返回数据流中
          */
         try {
-            ServerSocket ss = new ServerSocket(TransferClient.port);
+            ServerSocket ss = new ServerSocket(Config.port);
             Socket mSocket = ss.accept();
 
             String ip = mSocket.getInetAddress().getHostName();
@@ -36,7 +36,7 @@ public class TransferService {
             BufferedWriter bufrOut = new BufferedWriter(new OutputStreamWriter(mSocket.getOutputStream()));
 
             String line = null;
-            while((line = bufrIn.readLine())!= null){
+            while ((line = bufrIn.readLine()) != null) {
 
                 System.out.println("Client send : " + line);
 

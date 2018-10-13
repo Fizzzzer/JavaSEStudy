@@ -11,9 +11,6 @@ import java.net.Socket;
  */
 public class TransferClient {
 
-    public static final String ipAddress = "10.10.116.157";
-    public static final int port = 10000;
-
     public static void main(String[] args) {
         sendMsg();
     }
@@ -27,7 +24,7 @@ public class TransferClient {
          */
 
         try {
-            Socket mSocket = new Socket(ipAddress, port);
+            Socket mSocket = new Socket(Config.ipAddress, Config.port);
 
             BufferedReader bufr = new BufferedReader(new InputStreamReader(System.in));
             BufferedWriter bufwOut = new BufferedWriter(new OutputStreamWriter(mSocket.getOutputStream()));
